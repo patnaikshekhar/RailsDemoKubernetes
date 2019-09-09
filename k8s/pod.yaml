@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rails-app
+  labels:
+    app: rails
+spec:
+  containers:
+  - name: app
+    image: patnaikshekhar/firstrailsapp:1

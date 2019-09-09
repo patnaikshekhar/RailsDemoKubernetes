@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rails
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rails
+  template:
+    metadata:
+      name: rails-app
+      labels:
+        app: rails
+    spec:
+      containers:
+      - name: app
+        image: patnaikshekhar/firstrailsapp:1
